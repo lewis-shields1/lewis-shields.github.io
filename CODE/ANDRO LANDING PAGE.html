@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ANDRO STYLE.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/MAILING-LIST.css">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Helvetica;
+        font-size: 17px;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #CFCECE;
+        width: 100vw;
+        height: auto;
+      }
+
+
+      #myVideo {
+        width: auto;
+        height: 100vh;
+        object-fit: cover;
+      }
+
+      #contentPost {
+        top: 50px;
+        position: fixed;
+        font-size: 40pt;
+        min-width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        width: 1000px;
+        position: absolute;
+        padding: auto;
+        outline: 2px;
+        outline-style: solid;
+        outline-color: red;
+        padding-top: 70vh;
+      }
+
+      .logo-landing-page {
+        margin-top: 50px;
+        width: 100%;
+        max-width: 1000px;
+      }
+
+      #mailing-list-landing-page {
+        position: fixed !important;
+        top: 53%;
+        padding-top: 10px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-bottom: 20px !important;
+        height: 250px;
+        width: 320px;
+        background-color: rgba(62, 62, 62, 0.8);
+        border-radius: 4px;
+        opacity: 0;
+      }
+
+      #socials-landing-page {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      #entersite {
+        position: absolute;
+        top: 87%;
+        width: 200px;
+        height: 50px;
+        border-radius: 2px;
+        border: 2px;
+        border-style: solid;
+        border-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.5);
+        font-family: DIDOT;
+        font-weight: BOLD;
+        text-decoration: none;
+        color: black;
+      }
+
+      #entersite:hover {
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+
+      @media only screen and (max-height: 700px) {
+        .logo-landing-page {
+          max-width: 550px !important;
+          margin-top: 0px !important;
+        }
+      @media only screen and (max-width: 420px) {
+        .logo-landing-page {
+          margin-top: 10px !important;
+        }
+      
+
+        @media only screen and (max-height: 460px) {
+          .logo-landing-page {
+            max-width: 350px;
+            margin-top: 0px;
+          }
+
+          #entersite {
+            transform: scale(0.7);
+            transform-origin: top;
+          }
+
+          @media only screen and (max-width: 768px) {
+
+            .logo-landing-page {
+              margin-top: 0px;
+              width: 100%;
+              max-width: 500px;
+            }
+
+            #myVideo {
+              width: auto;
+              height: 100vh;
+              object-fit: cover;
+            }
+    </style>
+  </head>
+
+
+  <body>
+    <script>
+      console.log("hello")
+      var video = document.getElementById("video");
+      let windowWidth = window.visualViewport.width
+      let windowHeight = window.visualViewport.height
+      console.log(windowWidth)
+
+      let source = document.createElement("source")
+      source.setAttribute("type", "video/mp4")
+
+      if (windowWidth < 518 && windowHeight > 375) {
+        //It is a small screen
+        source.setAttribute("src", 'ANDRO test.mp4')
+        video.append(source);
+      } else
+        if (windowWidth > 518 && windowWidth < 1400 && windowHeight > 788) {
+          //It is an iPad
+          source.setAttribute("src", 'ANDRO test.mp4')
+          video.append(source);
+        }
+        else
+          if (windowWidth < 1400 && windowHeight < 788) {
+            //It is a portrait device
+            source.setAttribute("src", 'ANDRO test.mp4')
+            video.append(source);
+          }
+          else
+            if (windowWidth > 1400) {
+              //It is a big screen or desktop
+              source.setAttribute("src", 'ANDRO test.p4')
+              video.append(source);
+            }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script>
+
+      $(document).ready(function () {
+        // Hide the div
+        $("#contentPost").hide();
+        // Show the div after 5s
+        $("#contentPost").delay(3000).fadeIn(100);
+      });
+
+      $(document).ready(function () {
+        // Hide the div
+        $("#mailing-list-landing-page").hide();
+        // Show the div after 5s
+        $("#mailing-list-landing-page").delay(4200).fadeIn(450);
+      });
+      $(document).ready(function () {
+        // Hide the div
+        $("#entersite").hide();
+        // Show the div after 5s
+        $("#entersite").delay(4600).fadeIn(250);
+      });
+
+    </script>
+
+
+    <video playsinline autoplay muted id="myVideo" poster="/landing-page-poster.png">
+      <source src="/ANDRO test_3.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <a id="entersite" href="/ANDRO SITE.html">ENTER SITE</a>
+
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+    <div id="contentPost">
+      <img src="/andro-black.png" alt="Andro-LOGO" class="logo-landing-page">
+    </div>
+
+
+
+  </body>
+
+  </html>
+</body>
+
+</html>

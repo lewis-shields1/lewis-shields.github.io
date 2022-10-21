@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ANDRO STYLE.css">
+    <link rel="stylesheet" href="/hamburger menu.css">
+    <link rel="stylesheet" href="/MAILING-LIST.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/hamburger menu.css">  
+    <style>
+        @media (min-width: 800px) {
+        .header-dropdown {
+          display: none;
+        }
+    
+        .hamburger {
+          display: none;
+        }
+      }
+
+      .menu-item-og:hover{
+        cursor: pointer;
+      }
+
+      #gallery:hover{
+        cursor: pointer;
+      }
+
+      .menu-item{
+        opacity: 0.8;
+      }
+
+      .menu-item:hover{
+        opacity: 1;
+      }
+
+      .gallery-pics-desktop{
+        display: block;
+        position: absolute;
+      }
+
+      .gallery-pics-mobile{
+        display:none;
+        position: absolute;
+      }
+
+      @media only screen and (max-width: 507px) {
+
+        .gallery-pics-desktop{
+          display: none;
+        }
+  
+        .gallery-pics-mobile{
+          display: block;
+        }
+        
+      }
+    </style>
+</head>
+<body>
+    <header class="header-dropdown">
+
+        <a href="#" class="hamburger"></a>
+        <nav>
+          <ul class="menu reveal-items">
+            <li><a href="/ANDRO SITE.html" class="menu-item">HOME</a></li>
+            <li><a href="/ANDRO SITE.html#live-dates" class="menu-item">LIVE</a></li>
+            <li><a href="/ANDRO SITE.html#music" class="menu-item">MUSIC</a></li>
+            <li><a href="/ANDRO SITE.html#merch" class="menu-item">MERCH</a></li>
+            <li><a href="/ANDRO SITE.html#video" class="menu-item">VIDEO</a></li>
+            <li><a class="menu-item" id="gallery">GALLERY</a></li>
+          </ul>
+        </nav>
+      </header>
+      <a class="logo-container" href="/ANDRO SITE.html">
+        <img class="andro-logo" src="/ANDRO_WHITE.png" alt="Andro logo">
+      </a>
+    
+      <div class="big-menu-container">
+        <div class="menu-container">
+          <a href="/ANDRO SITE.html#live-dates" class="menu-item-og">LIVE</a>
+          <a href="/ANDRO SITE.html#music" class="menu-item-og">MUSIC</a>
+          <a href="/ANDRO SITE.html#merch" class="menu-item-og">MERCH</a>
+          <a href="ANDRO SITE.html#video" class="menu-item-og">VIDEO</a>
+          <a class="menu-item-og">GALLERY</a>
+        </div>
+      </div>
+      <script src="/app.js"></script>
+
+      <div class="gallery-pics-desktop" style="min-width: 100vw;">
+        <img src="/gallery1.jpg" alt="Collage of Photos of Andro" style="width:100%; height:auto;">
+      </div>
+
+      <div class="gallery-pics-mobile" style="min-width:100vw;">
+        <img src="/gallery2.jpg" alt="Collage of Photos of Andro" style="width:100%; height:auto;">
+      </div>
+</body>
+</html>
