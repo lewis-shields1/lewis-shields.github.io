@@ -373,33 +373,22 @@
         icon.style.opacity = "0.7";
         video.muted = true;
         icon2.style.opacity = "0"
-      } else {
+      }
+      else if (!video2.muted){
+        icon.style.opacity = "0.7";
+        video.muted = true;
+        icon2.style.opacity = "0"
+      }
+      else if (!video3.muted){
+        icon.style.opacity = "0.7";
+        video.muted = true;
+        icon2.style.opacity = "0"
+      }
+      else {
         icon.style.opacity = "0";
         icon2.style.opacity = "0.7"
         video.muted = false;
       }
-
-      if (!video2.muted) {
-        icon.style.opacity = "0.7";
-        video2.muted = true;
-        icon2.style.opacity = "0"
-      } else {
-        icon.style.opacity = "0";
-        icon2.style.opacity = "0.7"
-        video2.muted = false;
-      }
-
-      if (!video2.muted) {
-        icon.style.opacity = "0.7";
-        video3.muted = true;
-        icon2.style.opacity = "0"
-      } else {
-        icon.style.opacity = "0";
-        icon2.style.opacity = "0.7"
-        video3.muted = false;
-      }
-
-
     }
   </script>
   <script>
