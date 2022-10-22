@@ -148,6 +148,7 @@
     transform: scaleX(1);
     opacity: 1;
     overflow-y: hidden;
+    max-height: 80vh;
   }
   
   .menu{
