@@ -29,9 +29,11 @@
     min-width: 100vw;
 }
 #smaller-video[poster]{
+    object-fit: cover;
     min-width: 100vw;
 }
 #mobile-video[poster]{
+    object-fit: cover;
     min-width: 100vw;
 }
 
