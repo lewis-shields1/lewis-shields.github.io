@@ -177,7 +177,7 @@ html,body{
     max-width: 100%;
     padding-top: 34px;
     padding-left: 40px;
-    z-index: 100;
+    z-index: 2;
 }
 
 .big-menu-container{
@@ -1048,6 +1048,10 @@ input{
     #banner-video{
         display: none;
     }
+    .andro-logo{
+        width: 150px;
+        padding-left: 30px;
+    }
     
 }
 @media only screen and (max-width: 507px) and (orientation:portrait) {
@@ -1118,6 +1122,10 @@ input{
         padding-left: 0px;
         padding-right: 0px;
     }
+    .andro-logo{
+        width: 150px;
+        padding-left: 10px;
+    }
 }
 @media only screen and (max-width: 400px) and (orientation:portrait) {
     .logo-container{
@@ -1160,10 +1168,6 @@ input{
     .hamburger{
         transform: scale(0.6);
         margin-top: -6px;
-    }
-    #mobile-video{
-        min-width:100vw;
-        height: auto;
     }
     .EP-artwork{
         max-width: 100vw;

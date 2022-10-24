@@ -58,12 +58,14 @@
   <button type="button" id="mob-menu-btn" onclick="lockScroll();"><a href="#" class="hamburger"></a></button>
     <nav id="hamburger-menu-shown">
       <ul class="menu reveal-items">
-        <li><a href="#home" class="menu-item">HOME</a></li>
+      <div class="menu-left">
         <li><a href="#live-dates" class="menu-item">LIVE</a></li>
         <li><a href="#music" class="menu-item">MUSIC</a></li>
-        <li><a href="#merch" class="menu-item">MERCH</a></li>
+      </div>
+      <div class="menu-right">
         <li><a href="#video" class="menu-item">VIDEO</a></li>
         <li><a href="/GALLERY.html" class="menu-item">GALLERY</a></li>
+      </div>
       </ul>
     </nav>
   </header>
@@ -76,12 +78,10 @@
       <source src="/home-page-vid-mobile.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
-    <div class="landing-video" id="home">
       <video playsinline autoplay muted loop id="smaller-video" poster="/homepage poster.png">
         <source src="smallest-wide.MOV" type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
-    <div class="landing-video" id="home">
       <video playsinline autoplay muted loop id="banner-video" poster="/homepage poster.png">
         <source src="/home-vid.MOV" type="video/mp4">
         Your browser does not support HTML5 video.
@@ -170,12 +170,11 @@
       <div class="menu-container">
         <a href="#live-dates" class="menu-item-og">LIVE</a>
         <a href="#music" class="menu-item-og">MUSIC</a>
-        <a href="#merch" class="menu-item-og">MERCH</a>
         <a href="#video" class="menu-item-og">VIDEO</a>
         <a href="/GALLERY.html" class="menu-item-og">GALLERY</a>
       </div>
     </div>
-
+  </div>
     <div id="full-page-container">
       <div class="height"></div>
       <div class="page" id="live-dates">
@@ -385,38 +384,6 @@
     }
   </script>
   <script>
-
-    console.log("hello")
-    var video = document.getElementById("banner-video");
-    let windowWidth = window.visualViewport.width
-    let windowHeight = window.visualViewport.height
-    console.log(windowWidth)
-
-    let source = document.createElement("source")
-    source.setAttribute("type", "video/mp4")
-
-    if (windowWidth < 518 && windowHeight > 375) {
-      //It is a small screen
-      source.setAttribute("src", "/mobile-video.mov")
-      video.append(source);
-    } else
-      if (windowWidth > 518 && windowWidth < 1400 && windowHeight > 788) {
-        //It is an iPad
-        source.setAttribute("src", "/mobile-video.mov")
-        video.append(source);
-      }
-      else
-        if (windowWidth < 1400 && windowHeight < 788) {
-          //It is a portrait device
-          source.setAttribute("src", "/mobile-video.mov")
-          video.append(source);
-        }
-        else
-          if (windowWidth > 1400) {
-            //It is a big screen or desktop
-            source.setAttribute("src", 'https://lewis-video-hosting.netlify.app/desktop_film.mp4')
-            video.append(source);
-          }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {

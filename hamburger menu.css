@@ -148,7 +148,9 @@
     transform: scaleX(1);
     opacity: 1;
     overflow-y: hidden;
-    max-height: 80vh;
+    max-height: 100vh;
+    position: fixed;
+    z-index: 1100;
   }
   
   .menu{
@@ -175,7 +177,23 @@
   
   .reveal-items .menu-item{
     text-align: center;
-  opacity: 1;
-  overflow-y: hidden;
+    opacity: 1;
+    overflow-y: hidden;
+  }
+  .menu-left{
+    margin-bottom: 20px;
+  }
+
+  @media only screen and (max-height: 500px){
+    .menu{
+      display: flex;
+      flex-direction: row;
+      margin-top: 20vh;
+      width: 100vw;
+      justify-content: space-evenly;
+    }
+    .menu-item{
+      font-size: calc(1.5rem + 2vh);
+    }
   }
   
