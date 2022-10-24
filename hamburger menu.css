@@ -17,6 +17,7 @@
     font-family: didot;
     font-size: 1rem;
   }
+  
   .boddyhidden{
     overflow: none;
   }
@@ -117,7 +118,6 @@
     background-color: white;
   
   }
-  
   
   nav{
     height: 100vh;
