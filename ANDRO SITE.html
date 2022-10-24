@@ -82,10 +82,6 @@
         <source src="smallest-wide.MOV" type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
-      <video playsinline autoplay muted loop id="banner-video" poster="/homepage poster.png">
-        <source src="/home-vid.MOV" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
 
         <div class="mailing-list-container">
 
@@ -345,30 +341,50 @@
     }
   </script>
   <script>
+    var video = document.getElementById("#banner-video");
+let windowWidth = window.visualViewport.width
+let windowHeight = window.visualViewport.height
+console.log(windowWidth)
+
+let source = document.createElement("source")
+source.setAttribute("type", "video/mp4")
+
+if (windowWidth < 518 && windowHeight > 375) {
+    //It is a small screen
+    source.setAttribute("src", '/smallest-wide.MOV')
+    video.append(source);
+} else 
+    if (windowWidth > 518 && windowWidth <1400 && windowHeight > 788)  {
+    //It is an iPad
+    source.setAttribute("src", '/home-page-vid-mobile.mp4')
+    video.append(source);
+}
+else 
+    if (windowWidth < 1400 && windowHeight <788)  {
+    //It is a portrait device
+    source.setAttribute("src", '/home-page-vid-mobile.mp4')
+    video.append(source);
+    }
+    else 
+    if (windowWidth >1400)  {
+    //It is a big screen or desktop
+    source.setAttribute("src", '/home-vid.MOV')
+    video.append(source);
+    }
     function mute() {
-      var video = document.getElementById("banner-video");
       var video2 = document.getElementById("smaller-video");
       var video3 = document.getElementById("mobile-video");
       let icon = document.getElementById("div");
       let icon2 = document.getElementById("div2");
 
-      if (!video.muted) {
+      if (!video2.muted){
         icon.style.opacity = "0.7";
-        video.muted = true;
-        video2.muted = true;
-        video3.muted = true;
-        icon2.style.opacity = "0"
-      }
-      else if (!video2.muted){
-        icon.style.opacity = "0.7";
-        video.muted = true;
         video2.muted = true;
         video3.muted = true;
         icon2.style.opacity = "0"
       }
       else if (!video3.muted){
         icon.style.opacity = "0.7";
-        video.muted = true;
         video2.muted = true;
         video3.muted = true;
         icon2.style.opacity = "0"
@@ -376,10 +392,8 @@
       else {
         icon.style.opacity = "0";
         icon2.style.opacity = "0.7"
-        video.muted = false;
         video2.muted = false;
         video3.muted = false;
-
       }
     }
     
