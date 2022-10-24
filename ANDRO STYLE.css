@@ -8,12 +8,12 @@ html,body{
     overflow-x: hidden;
     max-width: 100%;
     position: relative;
-}
+} 
 .lock-scroll00000 {
     position:fixed;
 }
 
-#mobile-video{
+.mobile-landing-video{
     max-width: 100vw;
     position: fixed;
     width: 100%;
@@ -21,7 +21,6 @@ html,body{
     position: absolute;
     object-fit: cover;
     z-index: 0;   
-    display: none;
 }
 
 #banner-video[poster]{
@@ -34,7 +33,6 @@ html,body{
 }
 #mobile-video[poster]{
     object-fit: cover;
-    
 }
 
 #smaller-video{
@@ -58,6 +56,17 @@ html,body{
     object-fit: cover;
     z-index: 0;   
     display: block;
+}
+
+#mobile-video{
+    max-width: 100vw;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;   
+    display: none;
 }
 
 .landing-video{
@@ -115,6 +124,7 @@ html,body{
     background-size:cover;
     width: 100vw;
     overflow: hidden;
+    height: 1600px;
 }
 
 .mailing-text{
@@ -141,7 +151,7 @@ html,body{
 
 .footer-text{
     font-family: didot;
-
+    margin-bottom: 20px;
 }
 
 .navbar{
@@ -755,7 +765,20 @@ input{
         display:none;
     }
 } */
-@media only screen and (max-width: 1500px) and (orientation:portrait) and (min-width:838px) {
+
+@media only screen and (max-width: 1800px) {
+    #banner-video{
+        display:none;
+    }
+    #smaller-video{
+        display:flex;
+    }
+    #mobile-video{
+        display:none;
+    }
+}
+
+@media only screen and (max-width: 1800px) and (orientation:portrait) {
 
     .award-poster{
         display: flex;
@@ -797,7 +820,7 @@ input{
         display:none;
     }
     #smaller-video{
-        display:flex;
+        display:block;
     }
     #mobile-video{
         display:none;
@@ -813,12 +836,6 @@ input{
 
     #topEP{
         margin-bottom: 40px;
-    }
-    #banner-video{
-        display: none !important;
-    }
-    #smaller-video{
-        display: flex;
     }
 
 }
@@ -836,15 +853,7 @@ input{
     .height{
         min-height:300px;
         min-width: 10px;
-        background-color: blue;
     }
-    #banner-video{
-        display: none !important;
-    }
-    #smaller-video{
-        display: flex;
-    }
-  
 }
 @media only screen and (max-width: 1024px) and (orientation:landscape){
     .mailing-list-container{
@@ -860,7 +869,6 @@ input{
     .height{
         min-height:300px;
         min-width: 10px;
-        background-color: blue;
     }
 
     .EP-container{
@@ -869,22 +877,20 @@ input{
     .buyandstream{
         margin-top:70px;
     }
-
     .header{
         margin-bottom: 40px;
     }
-
     #banner-video{
-        display: none !important;
+        display:none;
     }
     #smaller-video{
-        display: flex;
+        display:none;
     }
-}
-
-@media only screen and (max-width: 800px) and (orientation:landscape){
-    #banner-video{
-        display: none;
+    #mobile-video{
+        display:block;
+    }
+    .end{
+        margin-top: 90px;
     }
 }
 @media only screen and (max-width: 1024px) and (orientation:portrait){
@@ -927,21 +933,20 @@ input{
     .height{
         min-height:350px;
         min-width: 10px;
-        background-color: blue;
     }
     .menu-container{
         display: flex;
     } 
     #banner-video{
-        display: none;
+        display:none;
     }
-
     #smaller-video{
-        display:flex;
+        display:none;
     }
-
+    #mobile-video{
+        display:block;
+    }
 }
-
 @media only screen and (max-width: 800px) and (min-height:400px) {
 
     /* .video{
@@ -976,19 +981,6 @@ input{
         padding-left: 0vw;
         padding-right:0vw;
     }
-    #banner-video{
-        display: none !important;
-    }
-    #mobile-video{
-        display:flex;
-        width: auto;
-        max-height:100vh;
-        align-self: center;
-        display: flex;
-    }
-    #smaller-video{
-        display:none!important;
-    } 
     .mailing-list-container{
         position: absolute;
         padding-top: 150px;
@@ -1002,139 +994,8 @@ input{
     .height{
         min-height:350px;
         min-width: 10px;
-        background-color: blue;
     }
 }
-
-@media only screen and (max-width: 507px) and (orientation:portrait) {
-
-    .page{
-        padding: 0px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-    .menu-container{
-        display: none;
-    }
-    .EP-artwork{
-        width:320px;
-    }
-    .EP-container{
-        height: 440px;
-    }
-    .end{
-        margin-top:70px;
-    }
-
-    .logo-container{
-        max-width: 270px;
-        margin-top: 5px;
-        margin-left: 5px;
-    }
-    /* .video{
-        width: 100vw;
-        height: 250px;
-    } */
-    .andro-logo{
-        padding-top: 25px;
-        padding-left: 30px;
-    }
-    #sib-container{
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .CONTAINER{
-        margin-top: 3px !important;
-        margin-bottom: 3px !important;
-    }
-    .award-poster{
-        width:100vw;
-        padding-left: 0vw;
-        padding-right:0vw;
-    }
-    #banner-video{
-        display:none;
-    }
-    #mobile-video{
-        display:flex;
-    }
-    .mailing-list-container{
-        position: absolute;
-        padding-top: 80px!important;
-        padding-left: 0px;
-        padding-bottom: 0px;
-        height: auto;
-        top:0;
-        margin-top:100vh;
-        width: 100vw;
-    }
-    .height{
-        min-height:300px!important;
-        min-width: 10px;
-        background-color: blue;
-    }
-    .end-margin{
-        height:20px !important;
-    }
-}
-
-@media only screen and (max-width: 400px) and (orientation:portrait) {
-    .logo-container{
-        max-width: 200px;
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-    .award-poster{
-        width:100vw;
-        padding-left: 0vw;
-        padding-right:0vw;
-    }
-    #banner-video{
-        display:none;
-    }
-    #mobile-video{
-        display:flex;
-        min-width: 100vw;
-    }
-    .mailing-list-container{
-        position: absolute;
-        padding-top: 150px;
-        padding-left: 0px;
-        padding-bottom: 0px;
-        height: auto;
-        top:0;
-        margin-top:100vh;
-        width: 100vw;
-    }
-    .height{
-        min-height:350px;
-        min-width: 10px;
-        background-color: blue;
-    }
-    .end-margin{
-        height:20px !important;
-    }
-    .andro-logo{
-        padding-left:15px;
-    }
-    /* .EP-artwork{
-        height: 90vh;
-        width: auto;
-    }
-
-    .EP-container{
-        height: auto;
-    }
-    .buyandstream{
-        margin-top:70px;
-    }
-
-    .header{
-        margin-bottom: 40px;
-    } */
-}
-
 @media only screen and (max-width: 799px) and (orientation:landscape) {
 
     .big-menu-container{
@@ -1183,12 +1044,113 @@ input{
     .height{
         min-height:350px;
         min-width: 10px;
-        background-color: blue;
     }
     #banner-video{
         display: none;
     }
     
+}
+@media only screen and (max-width: 507px) and (orientation:portrait) {
+
+    .page{
+        padding: 0px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .menu-container{
+        display: none;
+    }
+    .EP-artwork{
+        width:320px;
+    }
+    .EP-container{
+        height: 440px;
+    }
+    .end{
+        margin-top:70px;
+    }
+
+    .logo-container{
+        max-width: 270px;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    /* .video{
+        width: 100vw;
+        height: 250px;
+    } */
+    .andro-logo{
+        padding-top: 25px;
+        padding-left: 30px;
+    }
+    #sib-container{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .CONTAINER{
+        margin-top: 3px !important;
+        margin-bottom: 3px !important;
+    }
+    .award-poster{
+        width:100vw;
+        padding-left: 0vw;
+        padding-right:0vw;
+    }
+    .mailing-list-container{
+        position: absolute;
+        padding-top: 80px!important;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        height: auto;
+        top:0;
+        margin-top:100vh;
+        width: 100vw;
+    }
+    .height{
+        min-height:300px!important;
+        min-width: 10px;
+    }
+    .end-margin{
+        height:20px !important;
+    }
+    .page-bottom{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+@media only screen and (max-width: 400px) and (orientation:portrait) {
+    .logo-container{
+        max-width: 200px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .award-poster{
+        width:100vw;
+        padding-left: 0vw;
+        padding-right:0vw;
+    }
+
+    .mailing-list-container{
+        position: absolute;
+        padding-top: 150px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        height: auto;
+        top:0;
+        margin-top:100vh;
+        width: 100vw;
+    }
+    .height{
+        min-height:350px;
+        min-width: 10px;
+    }
+    .end-margin{
+        height:20px !important;
+    }
+    .andro-logo{
+        padding-left:15px;
+    }
 }
 @media only screen and (max-width: 300px) {
     .andro-logo{
@@ -1203,11 +1165,8 @@ input{
         min-width:100vw;
         height: auto;
     }
-    #banner-video{
-        display:none;
-    }
     .EP-artwork{
         max-width: 100vw;
     }
-}
+} 
 
