@@ -138,6 +138,8 @@
     transition: transform 0.1s ease-in-out, opacity 0.1s ease-in;
     z-index: 1000;
     color:black;
+    overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
   }
 
   .hamburger {
@@ -151,6 +153,8 @@
     max-height: 100vh;
     position: fixed;
     z-index: 1100;
+    overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
   }
   
   .menu{
@@ -179,9 +183,15 @@
     text-align: center;
     opacity: 1;
     overflow-y: hidden;
+    overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
   }
   .menu-left{
     margin-bottom: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
   }
 
   @media only screen and (max-height: 500px){
