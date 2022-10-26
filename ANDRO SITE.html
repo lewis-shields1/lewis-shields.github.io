@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ANDRO OFFICIAL - HOME</title>
   <link rel="stylesheet" href="ANDRO STYLE.css">
   <link rel="stylesheet" href="/hamburger menu.css">
   <link rel="stylesheet" href="/MAILING-LIST.css">
@@ -16,11 +16,6 @@
 
     function lockScroll() {
       document.body.classList.toggle('lock-scroll');
-    }
-
-    function removeLock() {
-      document.body.classList.remove('lock-scroll');
-      console.log ("hello")
     }
   </script>
   <style>
@@ -64,7 +59,7 @@
     <button type="button" id="mob-menu-btn" onclick="lockScroll();"><a href="#" class="hamburger"></a></button>
     <nav id="hamburger-menu-shown">
       <ul class="menu reveal-items">
-          <li><a href="#live-dates" class="menu-item">LIVE</a></li>
+          <li><a href="#live-dates" class="menu-item" >LIVE</a></li>
           <li><a href="#music" class="menu-item">MUSIC</a></li>
           <li><a href="#video" class="menu-item">VIDEO</a></li>
           <li><a href="/GALLERY.html" class="menu-item">GALLERY</a></li>
@@ -322,7 +317,18 @@
   </div>
   </div>
   </div>
+  <script>
+    window.onload = function() {
+        var anchors = document.getElementsByClassName('menu-item');
+        for(var i = 0; i < anchors.length; i++) {
+            var anchor = anchors[i];
+            anchor.onclick = function() {
+              "lockScroll();";
+            }
 
+        }
+    }
+</script>
   <script src="/app.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script async>
